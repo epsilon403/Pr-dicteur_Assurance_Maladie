@@ -42,13 +42,12 @@ with col2:
 # --- Data Preprocessing and Prediction ---
 if st.button('**Predict Charges**', type="primary"):
 
-    # Map categorical inputs to numerical values
-    # NOTE: This mapping must match the one used during model training!
+
     sex_map = {'Male': 0, 'Female': 1}
     smoker_map = {'No': 0, 'Yes': 1}
     region_map = {'Southwest': 0, 'Southeast': 1, 'Northwest': 2, 'Northeast': 3}
 
-    # Create a DataFrame from the inputs
+
     input_data = pd.DataFrame({
         'age': [age],
         'sex': [sex_map[sex]],
